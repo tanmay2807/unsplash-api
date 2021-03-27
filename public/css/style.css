@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Ubuntu",sans-serif;
+}
+
+.header {
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.heading {
+  height: 5rem;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heading .heading-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 485px) {
+  .heading .heading-1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .heading .heading-1 {
+    display: block;
+  }
+}
+
+.heading .heading-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #888;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 460px) {
+  .heading .heading-2 {
+    display: none;
+  }
+}
+
+.heading .heading-2-items {
+  margin: auto 1rem auto 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  .heading .heading-2-items {
+    font-size: 1.2rem;
+  }
+}
+
+.heading .heading-2-items:hover {
+  color: #666;
+}
+
+.heading .heading-2-items .image-holder {
+  shape-outside: circle(50% at 50% 50%);
+  height: 2rem;
+  height: 2rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+
+.heading .heading-2-items .image-holder .image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.heading .heading-2-items-5 {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 8em;
+}
+
+@media only screen and (max-width: 650px) {
+  .heading .heading-2-items-5 {
+    width: 10rem;
+  }
+}
+
+.heading .heading-2-items-5:hover {
+  background-color: #ccc;
+  color: white;
+}
+
+.heading .heading-2-items-1 {
+  color: black;
+}
+
+.heading .heading-3 {
+  display: none;
+  height: 3rem;
+  margin: auto 2rem auto auto;
+  background-color: black;
+  width: 3rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  padding-top: 1rem;
+  padding-left: 0.6rem;
+}
+
+@media only screen and (max-width: 460px) {
+  .heading .heading-3 {
+    display: block;
+  }
+}
+
+.heading .heading-3-1 {
+  border-top: 3px solid white;
+  width: 1.8rem;
+  padding: 0.66px;
+}
+
+.heading .heading-3-2 {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 1.8rem;
+  padding: 0.5px;
+}
+
+.background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url(../images/bg.jfif);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../images/bg.jfif);
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.background-text {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 986px) {
+  .background-text {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    -webkit-transform: translate(-10%, -50%);
+            transform: translate(-10%, -50%);
+  }
+}
+
+.background-text .text-1 {
+  color: white;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 650px) {
+  .background-text .text-1 {
+    font-size: 4.5rem;
+  }
+}
+
+.background-text .text-2 {
+  color: #eee;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 650px) {
+  .background-text .text-2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .background-text .text-2 {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+.background-text .text-3 {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .background-text .text-3 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .background-text .text-3 {
+    font-size: 0.9rem;
+  }
+}
+
+.background-text .input {
+  height: 4.5rem;
+  width: 130%;
+  background-color: #eee;
+  border: 1px solid black;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.background-text .input ::-webkit-input-placeholder {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 986px) {
+  .background-text .input {
+    width: 90%;
+  }
+}
+
+.background-text .button {
+  height: 3.7rem;
+  width: 12%;
+  background-color: white;
+  border: 1px solid white;
+  position: absolute;
+  top: 66%;
+  right: -29%;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 986px) {
+  .background-text .button {
+    right: 11%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .background-text .button {
+    top: 65%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .background-text .button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .background-text .button {
+    top: 66%;
+  }
+}
+
+.background-text .svg {
+  -webkit-transform: translate(60%, 40%);
+          transform: translate(60%, 40%);
+  position: absolute;
+  z-index: 2;
+  fill: #777;
+}
+
+.background .left {
+  position: absolute;
+  top: 95%;
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 460px) {
+  .background .left {
+    font-size: 0.6rem;
+  }
+}
+
+.background .right {
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 95%;
+  right: 2%;
+}
+
+@media only screen and (max-width: 460px) {
+  .background .right {
+    font-size: 0.6rem;
+  }
+}
+
+.grid {
+  height: 100rem;
+  width: 100%;
+  background-color: white;
+}
+
+.grid-options {
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  font-size: 2rem;
+  color: #666;
+}
+
+.grid-options-2 {
+  margin: 5rem;
+  color: #666;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 986px) {
+  .grid-options-2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .grid-options-2 {
+    margin-left: 2.5rem;
+  }
+}
+
+.grid-options-2:visited {
+  color: #666;
+}
+
+.grid-options-1 {
+  margin: 5rem;
+  margin-right: 0rem;
+  margin-left: 6rem;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 986px) {
+  .grid-options-1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .grid-options-1 {
+    margin-left: 3rem;
+  }
+}
+
+.grid-options-1:visited {
+  color: #666;
+}
+
+.grid-options-3 {
+  margin: 5rem;
+}
+
+.grid .container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-auto-flow: row;
+  padding: 3rem;
+  padding-top: 0rem;
+}
+
+@media only screen and (max-width: 770px) {
+  .grid .container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+.grid .container .wrapper {
+  height: 25rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 986px) {
+  .grid .container .wrapper {
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .grid .container .wrapper {
+    height: 27rem;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .grid .container .wrapper {
+    height: 17rem;
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .grid .container .wrapper {
+    height: 13rem;
+    width: 100%;
+  }
+}
+
+.grid .container .wrapper .pics {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.current {
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

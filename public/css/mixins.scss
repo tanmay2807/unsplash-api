@@ -1,0 +1,30 @@
+@mixin break($break){
+    @if $break == b1 {
+        @media only screen and (max-width:986px)
+        {@content};
+    }
+    @if $break == b2 {
+        @media only screen and (max-width:770px)
+        {@content};
+    }
+    @if $break == b3 {
+        @media only screen and (max-width:650px)
+        {@content};
+    }
+    @if $break == b4 {
+        @media only screen and (max-width:580px)
+        {@content};
+    }
+    @if $break == b5 {
+        @media only screen and (max-width:485px)
+        {@content};
+    }
+    @if $break == b6 {
+        @media only screen and (max-width:460px)
+        {@content};
+    }
+    @if $break == b7 {
+        @media only screen and (max-width:390px)
+        {@content};
+    }
+}
