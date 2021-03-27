@@ -5,7 +5,6 @@ const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
 
-
 const app = express();
 
 app.set("view engine","ejs");
@@ -33,8 +32,13 @@ app.get("/", (req,res)=>{
             json = JSON.parse(udata);
         });
     });
+
     setTimeout(() => {
-        res.render("list", {json: json, query: query});
+        if(json.results[10] != undefined){
+            res.render("list", {json: json, query: query});   
+        } else {
+            res.render("error");
+        }
     }, 3000);
 });
 
@@ -56,15 +60,13 @@ app.post("/", (req,res)=>{
         });
     });
 
-    if(json.results[10] != undefined){
-        setTimeout(() => {
-            res.render("list", {json: json, query: query});
-        }, 3000);
-    } else {
-        res.render("error");
-    }
-
-    
+    setTimeout(() => {
+        if(json.results[10] != undefined){
+            res.render("list", {json: json, query: query});   
+        } else {
+            res.render("error");
+        }
+    }, 3000);
 });
 
 app.listen(process.env.PORT || 3000,function(){
