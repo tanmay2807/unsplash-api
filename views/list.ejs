@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bipolar Factory</title>
+    <title>Unsplash Search Model</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -67,7 +67,7 @@
 
         <div class="container">
             
-            <% for( var i=0; i<10;i++){ %>
+            <% for( var i=0; i< json.results.length;i++){ %>
                 <div class ="wrapper"> 
                     <img src ="<%= json.results[i].urls.full %>" class="pics"> 
                 </div>

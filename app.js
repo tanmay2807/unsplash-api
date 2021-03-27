@@ -1,7 +1,6 @@
 //jshint esversion:6
 require("dotenv").config();
 const express = require("express");
-const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
 
@@ -13,7 +12,7 @@ app.use(express.static(__dirname+ "/public"));
 
 var url;
 var json;
-var query;
+var query = "love";
 
 app.get("/", (req,res)=>{
     query = "love";
@@ -33,13 +32,13 @@ app.get("/", (req,res)=>{
         });
     });
 
-    if(json.results[10] != undefined){
+    if(json != undefined){
         setTimeout(() => {
             res.render("list", {json: json, query: query});
         }, 3000);
     } else {
         res.render("error");
-    }    
+    }
 });
 
 app.post("/", (req,res)=>{
@@ -60,13 +59,13 @@ app.post("/", (req,res)=>{
         });
     });
 
-    if(json.results[10] != undefined){
+    if(json != undefined){
         setTimeout(() => {
             res.render("list", {json: json, query: query});
         }, 3000);
     } else {
         res.render("error");
-    }    
+    }
 });
 
 app.listen(process.env.PORT || 3000,function(){
