@@ -38,9 +38,7 @@ app.get("/", (req,res)=>{
             res.render("list", {json: json, query: query});
         }, 3000);
     } else {
-        setTimeout(() => {
-            res.render("error");
-        }, 3000);
+        res.render("error");
     }    
 });
 
@@ -67,9 +65,7 @@ app.post("/", (req,res)=>{
             res.render("list", {json: json, query: query});
         }, 3000);
     } else {
-        setTimeout(() => {
-            res.render("error");
-        }, 3000);
+        res.render("error");
     }    
 });
 
