@@ -33,13 +33,15 @@ app.get("/", (req,res)=>{
         });
     });
 
-    setTimeout(() => {
-        if(json.results[10] != undefined){
-            res.render("list", {json: json, query: query});   
-        } else {
+    if(json.results[10] != undefined){
+        setTimeout(() => {
+            res.render("list", {json: json, query: query});
+        }, 3000);
+    } else {
+        setTimeout(() => {
             res.render("error");
-        }
-    }, 3000);
+        }, 3000);
+    }    
 });
 
 app.post("/", (req,res)=>{
@@ -60,13 +62,15 @@ app.post("/", (req,res)=>{
         });
     });
 
-    setTimeout(() => {
-        if(json.results[10] != undefined){
-            res.render("list", {json: json, query: query});   
-        } else {
+    if(json.results[10] != undefined){
+        setTimeout(() => {
+            res.render("list", {json: json, query: query});
+        }, 3000);
+    } else {
+        setTimeout(() => {
             res.render("error");
-        }
-    }, 3000);
+        }, 3000);
+    }    
 });
 
 app.listen(process.env.PORT || 3000,function(){
